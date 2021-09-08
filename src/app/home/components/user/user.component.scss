@@ -1,0 +1,100 @@
+.user-container {
+  border-radius: 10px;
+  background-color: #313a57;
+  margin-top: 15px;
+  padding: 25px;
+  color: #f2f2f2;
+  .container-user_data {
+    .header-information{
+      margin-bottom: 20px;
+      display: flex;
+      .user-image {
+        width: 100px;
+        height: 100px;
+        border-radius: 100%;
+      }
+      .user-info {
+        margin-left: 20px;
+        padding-top: 10px;
+      }
+    }
+    .data-user_body {
+      .user-followers {
+        display: flex;
+        justify-content: space-evenly;
+        text-align: center;
+        background-color: #1d2033;
+        margin: auto;
+        margin-top: 25px;
+        border-radius: 10px;
+        padding: 15px;
+        .repos {
+          p {
+            font-weight: 900;
+          }
+          span {
+            font-size: 14px;
+          }
+        }
+        .followers {
+          p {
+            font-weight: 900;
+          }
+          span {
+            font-size: 14px;
+          }
+        }
+        .following {
+          p {
+            font-weight: 900;
+          }
+          span {
+            font-size: 14px;
+          }
+        }
+      }
+      .more-user_info {
+        span {
+          margin-top: 10px;
+        }
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+      }
+    }
+  }
+}
+
+i.fa {
+  font-family: fontawesome !important;
+  font-size: 20px;
+}
+
+@media screen and (max-width: 375px) {
+  .user-container {
+    width: 100%;
+    .user-info {
+      font-size: 13px;
+      .name {
+        font-size: 15px;
+      }
+    }
+    .user-followers {
+      padding-top: 10px;
+    }
+    .data-user_body {
+      .text {
+        font-size: 13px;
+      }
+    }
+  }
+}
+
+@media (min-width: 376px) and (max-width: 768px){
+    .header-information {
+      .user-image {
+        width: 150px !important;
+        height: 150px !important;
+      }
+    }
+}

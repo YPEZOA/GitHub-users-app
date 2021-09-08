@@ -7,12 +7,14 @@ import { HomeComponent } from './home/home.component';
 import { SharedModule } from './shared/shared.module';
 import { HttpClientModule } from '@angular/common/http';
 import { SearchFieldComponent } from './home/components/search-field/search-field.component';
+import { UserComponent } from './home/components/user/user.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    SearchFieldComponent
+    SearchFieldComponent,
+    UserComponent
   ],
   imports: [
     BrowserModule,

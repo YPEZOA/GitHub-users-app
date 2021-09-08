@@ -9,7 +9,6 @@ import { FormControl } from '@angular/forms';
 export class SearchFieldComponent implements OnInit {
 
   @Output() searchUser = new EventEmitter<string>();
-  search = new FormControl();
 
   constructor() { }
 
@@ -20,7 +19,6 @@ export class SearchFieldComponent implements OnInit {
     let user = e.target.value;
     if (user.trim() == '') return;
     this.searchUser.emit(user)
-    console.log(user);
   }
 
 }

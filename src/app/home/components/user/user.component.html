@@ -1,1 +1,39 @@
-<p>user works!</p>
+<div class="user-container">
+  <div class="container-user_data" *ngIf="userData">
+    <header class="header-information">
+        <img class="user-image" [src]="userData.avatar_url" alt="user-image">
+      <div class="user-info">
+        <h3 class="name">{{ userData.login }}</h3>
+        <a class="page" [href]="userData.html_url" target="blank">{{ userData.login }}</a>
+        <p class="created_at">Joined {{ userData.created_at | date: 'mediumDate'}}</p>
+      </div>
+    </header>
+    <div class="data-user_body">
+      <section class="text">
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis ut maiores assumenda odit dolore. Quis ad quasi at a quam blanditiis dolore reprehenderit voluptas. Beatae ipsum amet natus dolores voluptatibus!</p>
+      </section>
+      <div class="user-followers">
+        <div class="repos">
+          <span>Repos</span>
+          <p>{{ userData.public_repos }}</p>
+        </div>
+        <div class="followers">
+          <span>Followers</span>
+          <p>{{ userData.followers }}</p>
+        </div>
+        <div class="following">
+          <span>Following</span>
+          <p>{{ userData.following }}</p>
+        </div>
+      </div>
+
+      <div class="more-user_info">
+        <span><i class="fa fa-map-marker"></i> {{ userData.location || '--'}}</span>
+        <span><i class="fa fa-link"></i> {{ userData.blog || '--'}}</span>
+        <span><i class="fa fa-twitter"></i> {{ userData.twitter_username || '--'}}</span>
+        <span><i class="fa fa-address-card"></i> {{ userData.bio || '--'}}</span>
+      </div>
+
+    </div>
+  </div>
+</div>
