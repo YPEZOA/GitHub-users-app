@@ -1,4 +1,5 @@
 <div class="main-container">
-  <app-search-field (searchUser)="onHandleSearchUser($event)"></app-search-field>
-  <app-user [userData]="userData"></app-user>
+  <input class="switched-mode" type="checkbox" [checked]="isDarkTheme" (change)="onSetTheme($event)">
+  <app-search-field [theme]="theme" (searchUser)="onHandleSearchUser($event)"></app-search-field>
+  <app-user [userData]="userData" [theme]="theme"></app-user>
 </div>

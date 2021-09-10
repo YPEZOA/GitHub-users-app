@@ -8,7 +8,7 @@ import { SharedModule } from './shared/shared.module';
 import { HttpClientModule } from '@angular/common/http';
 import { SearchFieldComponent } from './home/components/search-field/search-field.component';
 import { UserComponent } from './home/components/user/user.component';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,6 +21,7 @@ import { UserComponent } from './home/components/user/user.component';
     AppRoutingModule,
     HttpClientModule,
     SharedModule,
+    BrowserAnimationsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

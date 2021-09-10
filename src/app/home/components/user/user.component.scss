@@ -1,6 +1,7 @@
+@import './../../../../assets/scss/Vars.scss';
+
 .user-container {
   border-radius: 10px;
-  background-color: #313a57;
   margin-top: 15px;
   padding: 25px;
   color: #f2f2f2;
@@ -16,6 +17,11 @@
       .user-info {
         margin-left: 20px;
         padding-top: 10px;
+        .page {
+          text-decoration: none;
+          color: rgb(24, 137, 230);
+          font-weight: 800;
+        }
       }
     }
     .data-user_body {
@@ -23,7 +29,6 @@
         display: flex;
         justify-content: space-evenly;
         text-align: center;
-        background-color: #1d2033;
         margin: auto;
         margin-top: 25px;
         border-radius: 10px;

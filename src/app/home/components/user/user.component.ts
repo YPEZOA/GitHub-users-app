@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, HostBinding } from '@angular/core';
 
 @Component({
   selector: 'app-user',
@@ -8,9 +8,16 @@ import { Component, Input, OnInit } from '@angular/core';
 export class UserComponent implements OnInit {
 
   @Input() userData: any;
+  @Input() theme!: string;
 
   constructor() { }
 
   ngOnInit(): void { }
+
+  public getTheme(): string {
+    return this.theme;
+  }
+
+  
 
 }

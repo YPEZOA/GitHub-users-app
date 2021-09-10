@@ -1,4 +1,4 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { FormControl } from '@angular/forms';
 
 @Component({
@@ -9,6 +9,7 @@ import { FormControl } from '@angular/forms';
 export class SearchFieldComponent implements OnInit {
 
   @Output() searchUser = new EventEmitter<string>();
+  @Input() theme!: string;
 
   constructor() { }
 
@@ -19,6 +20,10 @@ export class SearchFieldComponent implements OnInit {
     let user = e.target.value;
     if (user.trim() == '') return;
     this.searchUser.emit(user)
+  }
+
+  public getTheme(): string {
+    return this.theme;
   }
 
 }

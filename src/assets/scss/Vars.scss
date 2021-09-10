@@ -1,0 +1,33 @@
+$bg-info-user-light-theme: #fff;
+$text-color-light: #1c2233;
+
+
+$bg-info-user-dark-theme: #313a57;
+$text-color-dark: #f2f2f2;
+
+// Light theme
+.light-theme {
+  * {
+    color: $text-color-light;
+  }
+  background-color: $bg-info-user-light-theme;
+  box-shadow: 0px 5px 6px #c3c3c3;
+  color: $text-color-light;
+  .user-followers { 
+    background-color: $bg-info-user-light-theme;
+  }
+}
+
+// Dark theme
+.dark-theme {
+  * {
+    color: $text-color-dark;
+  }
+  background-color: $bg-info-user-dark-theme;
+  .user-info, .data-user_body {
+    color: $text-color-dark;
+  }
+  .user-followers { 
+    background-color: #1c2233;
+  }
+}

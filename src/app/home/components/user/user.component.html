@@ -1,4 +1,4 @@
-<div class="user-container">
+<div class="user-container" [ngClass]="getTheme()">
   <div class="container-user_data" *ngIf="userData">
     <header class="header-information">
         <img class="user-image" [src]="userData.avatar_url" alt="user-image">

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostBinding, OnInit } from '@angular/core';
 import { GithubServicesService } from '../services/github-services.service';
 
 @Component({
@@ -9,8 +9,13 @@ import { GithubServicesService } from '../services/github-services.service';
 export class HomeComponent implements OnInit {
 
   userData: any;
+  theme!: string;
+  isDarkTheme: boolean;
 
-  constructor(private githubService: GithubServicesService) { }
+  constructor(private githubService: GithubServicesService) { 
+    this.theme = 'light-theme'
+    this.isDarkTheme = false;
+  }
 
   ngOnInit(): void {
   }
@@ -19,6 +24,15 @@ export class HomeComponent implements OnInit {
     this.githubService.searchUsers(user).subscribe(resp => {
       this.userData = resp
     })
+  }
+
+  public onSetTheme(event: any) {
+    this.isDarkTheme = event.target.checked
+    this.isDarkTheme ? this.theme = 'dark-theme' : this.theme = 'light-theme'
+  }
+
+  public getTheme() {
+    return this.theme;
   }
 
 }

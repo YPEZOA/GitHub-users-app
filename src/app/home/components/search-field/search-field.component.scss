@@ -1,21 +1,28 @@
+@import './../../../../assets/scss/Vars.scss';
+
 .container-field {
   width: 100%;
   margin: auto;
-  background-color: #313a57;
   padding: 10px;
   border-radius: 9px;
   .search-field {
     border: none;
     background-color: transparent;
     font-size: 16px;
-    color: #f2f2f2;
     box-shadow: none;
+  }
+  .search-button {
+    border: none;
+    background-color: rgb(72, 169, 201);
+    color: #fff;
+    border-radius: 10px;
+    padding: 10px;
   }
 }
 
 i.fa {
   font-family: fontawesome !important;
-  color: rgb(87, 131, 214);
+  color: #48a9c9 !important;
   font-size: 25px;
   margin: auto;
   margin-left: 10px;

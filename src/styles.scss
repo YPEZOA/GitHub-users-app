@@ -1,1 +1,31 @@
-/* You can add global styles to this file, and also import other style files */
+@import '~@angular/material/theming';
+@include mat-core();
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+$GitHub-primary: mat-palette($mat-indigo);
+$GitHub-accent: mat-palette($mat-pink, A200, A100, A400);
+$GitHub-warn: mat-palette($mat-red);
+
+$GitHub-theme: mat-light-theme((
+  color: (
+    primary: $GitHub-primary,
+    accent: $GitHub-accent,
+    warn: $GitHub-warn
+  )
+));
+
+$GitHub-dark-theme: mat-dark-theme((
+  color: (
+    primary: $GitHub-primary,
+    accent: $GitHub-accent,
+    warn: $GitHub-warn
+  )
+));
+
+.dark-theme {
+  @include angular-material-theme($GitHub-dark-theme)
+};
+
+@include angular-material-theme($GitHub-theme);

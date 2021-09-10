@@ -1,4 +1,15 @@
 .main-container {
-  padding: 20px;
+  width: 50%;
+  margin: auto;
+  padding: 50px;
   font-family: consolas;
+  .switched-mode {
+    padding-left: 10px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .main-container {
+    width: 100%;
+  }
 }

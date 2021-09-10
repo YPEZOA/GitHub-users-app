@@ -1,4 +1,4 @@
-<div class="input-group container-field">
+<div class="input-group container-field" [ngClass]="getTheme()">
   <i class="fa fa-search"></i><input type="text" formControlName="searchField" class="form-control search-field" 
     (change)="handleSearchUser($event)" placeholder="Search GitHub username...">
   <div class="input-group-prepend">
