@@ -18,6 +18,4 @@ export class UserComponent implements OnInit {
     return this.theme;
   }
 
-  
-
 }
